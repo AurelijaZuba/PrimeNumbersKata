@@ -13,11 +13,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class PrimeFactorsShould {
     private static Stream<Arguments> primeFactorTestProvider() {
-        List<Integer> primeFactors = asList(1);
-        List<Integer> primeFactors2 = asList(2);
+        List<Integer> primeFactorsOf1 = asList(1);
+        List<Integer> primeFactorsOf2 = asList(2);
         return Stream.of(
-                Arguments.of(1, primeFactors),
-                Arguments.of(2, primeFactors2)
+                Arguments.of(1, primeFactorsOf1),
+                Arguments.of(2, primeFactorsOf2)
         );
     }
 
