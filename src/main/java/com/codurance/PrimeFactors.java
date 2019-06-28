@@ -8,50 +8,40 @@ import static java.util.Arrays.asList;
 public class PrimeFactors {
 
     private static final List<Integer> primeNumbers = asList(1, 2, 3, 5, 7);
+    private static List<Integer> primeFactors;
 
     public static List<Integer> generate(int input) {
-        List<Integer> primeFactors = new ArrayList<>();
+        primeFactors = new ArrayList<>();
 
         if (isPrimeNumber(input)) {
             primeFactors.add(input);
             return primeFactors;
         }
 
-        return calculatePrimeFactors(input);
+        int result = input;
+        do {
+            result = identifyFactors(result);
+        } while(result > 1);
+        return primeFactors;
     }
 
-    private static List<Integer> calculatePrimeFactors(int input) {
-        List<Integer> primeFactors = new ArrayList<>();
+    private static int identifyFactors(int result) {
+        for (int i = primeNumbers.size() - 1; i > 0; i--) {
+            result = identifyPrimeFactor(result, primeNumbers.get(i));
+        }
+        return result;
+    }
 
-        if(input == 9) {
-            int result = input;
-            do {
-                for (int i = primeNumbers.size() - 1; i > 0; i--) {
-                    int prime = primeNumbers.get(i);
-                    if(result % prime > 0){
-                        continue;
-                    }
-                    primeFactors.add(prime);
-                    result = result / prime;
-                    break;
-                }
-            } while(result > 1);
+    private static int identifyPrimeFactor(int result, int prime) {
+        if(isDivisibleByPrime(result, prime)){
+            primeFactors.add(prime);
+            result = result / prime;
         }
+        return result;
+    }
 
-        if(input == 8){
-            primeFactors.add(2);
-            primeFactors.add(2);
-            primeFactors.add(2);
-        }
-        if(input == 6){
-            primeFactors.add(2);
-            primeFactors.add(3);
-        }
-        if (input == 4) {
-            primeFactors.add(2);
-            primeFactors.add(2);
-        }
-        return primeFactors;
+    private static boolean isDivisibleByPrime(int result, int prime) {
+        return result % prime == 0;
     }
 
     private static boolean isPrimeNumber(int input) {
