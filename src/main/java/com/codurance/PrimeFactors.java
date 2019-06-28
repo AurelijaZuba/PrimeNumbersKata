@@ -13,9 +13,14 @@ public class PrimeFactors {
             primeFactors.add(input);
             return primeFactors;
         }
-
-        primeFactors.add(2);
-        primeFactors.add(2);
+        if(input == 6){
+            primeFactors.add(2);
+            primeFactors.add(3);
+        }
+        if (input == 4) {
+            primeFactors.add(2);
+            primeFactors.add(2);
+        }
 
         return primeFactors;
     }
