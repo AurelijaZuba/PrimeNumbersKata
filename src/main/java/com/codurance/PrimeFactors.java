@@ -26,7 +26,7 @@ public class PrimeFactors {
     }
 
     private static boolean isPrimeNumber(int input) {
-        List<Integer> primeNumbers = asList(1, 2, 3, 5);
+        List<Integer> primeNumbers = asList(1, 2, 3, 5, 7);
 
         return primeNumbers.contains(input);
     }
