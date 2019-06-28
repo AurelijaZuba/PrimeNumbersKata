@@ -19,6 +19,7 @@ public class PrimeFactorsShould {
         List<Integer> primeFactorsOf5 = asList(5);
         List<Integer> primeFactorsOf6 = asList(2, 3);
         List<Integer> primeFactorsOf7 = asList(7);
+        List<Integer> primeFactorsOf8 = asList(2,2,2);
         return Stream.of(
                 Arguments.of(1, primeFactorsOf1),
                 Arguments.of(2, primeFactorsOf2),
@@ -26,7 +27,8 @@ public class PrimeFactorsShould {
                 Arguments.of(4, primeFactorsOf4),
                 Arguments.of(5, primeFactorsOf5),
                 Arguments.of(6, primeFactorsOf6),
-                Arguments.of(7, primeFactorsOf7)
+                Arguments.of(7, primeFactorsOf7),
+                Arguments.of(8, primeFactorsOf8)
         );
     }
 
