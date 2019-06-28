@@ -18,13 +18,15 @@ public class PrimeFactorsShould {
         List<Integer> primeFactorsOf4 = asList(2,2);
         List<Integer> primeFactorsOf5 = asList(5);
         List<Integer> primeFactorsOf6 = asList(2, 3);
+        List<Integer> primeFactorsOf7 = asList(7);
         return Stream.of(
                 Arguments.of(1, primeFactorsOf1),
                 Arguments.of(2, primeFactorsOf2),
                 Arguments.of(3, primeFactorsOf3),
                 Arguments.of(4, primeFactorsOf4),
                 Arguments.of(5, primeFactorsOf5),
-                Arguments.of(6, primeFactorsOf6)
+                Arguments.of(6, primeFactorsOf6),
+                Arguments.of(7, primeFactorsOf7)
         );
     }
 
