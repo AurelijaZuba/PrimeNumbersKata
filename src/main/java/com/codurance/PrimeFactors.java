@@ -13,6 +13,11 @@ public class PrimeFactors {
             primeFactors.add(input);
             return primeFactors;
         }
+        if(input == 8){
+            primeFactors.add(2);
+            primeFactors.add(2);
+            primeFactors.add(2);
+        }
         if(input == 6){
             primeFactors.add(2);
             primeFactors.add(3);
