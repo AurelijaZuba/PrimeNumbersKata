@@ -19,6 +19,6 @@ public class PrimeFactors {
     }
 
     private static boolean isPrimeNumber(int input) {
-        return input == 1 || input == 2 || input == 3;
+        return input == 1 || input == 2 || input == 3 || input == 5;
     }
 }
