@@ -14,9 +14,12 @@ public class PrimeFactorsShould {
     private static Stream<Arguments> primeFactorTestProvider() {
         List<Integer> primeFactorsOf1 = asList(1);
         List<Integer> primeFactorsOf2 = asList(2);
+        List<Integer> primeFactorsOf3 = asList(3);
+
         return Stream.of(
                 Arguments.of(1, primeFactorsOf1),
-                Arguments.of(2, primeFactorsOf2)
+                Arguments.of(2, primeFactorsOf2),
+                Arguments.of(3, primeFactorsOf3)
         );
     }
 
