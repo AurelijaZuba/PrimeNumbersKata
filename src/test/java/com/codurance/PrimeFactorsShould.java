@@ -21,6 +21,6 @@ public class PrimeFactorsShould {
     void generate_prime_factors(int input, Integer[] expected) {
         List<Integer> result = PrimeFactors.generate(input);
 
-        assertThat(result).isEqualTo(expected);
+        assertThat(result).containsExactly(expected);
     }
 }
