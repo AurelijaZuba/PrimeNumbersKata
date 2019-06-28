@@ -13,6 +13,13 @@ public class PrimeFactors {
             primeFactors.add(input);
             return primeFactors;
         }
+
+        return calculatePrimeFactors(input);
+    }
+
+    private static List<Integer> calculatePrimeFactors(int input) {
+        List<Integer> primeFactors = new ArrayList<>();
+
         if(input == 8){
             primeFactors.add(2);
             primeFactors.add(2);
@@ -26,7 +33,6 @@ public class PrimeFactors {
             primeFactors.add(2);
             primeFactors.add(2);
         }
-
         return primeFactors;
     }
 
