@@ -15,11 +15,12 @@ public class PrimeFactorsShould {
         List<Integer> primeFactorsOf1 = asList(1);
         List<Integer> primeFactorsOf2 = asList(2);
         List<Integer> primeFactorsOf3 = asList(3);
-
+        List<Integer> primeFactorsOf4 = asList(2,2);
         return Stream.of(
                 Arguments.of(1, primeFactorsOf1),
                 Arguments.of(2, primeFactorsOf2),
-                Arguments.of(3, primeFactorsOf3)
+                Arguments.of(3, primeFactorsOf3),
+                Arguments.of(4, primeFactorsOf4)
         );
     }
 
