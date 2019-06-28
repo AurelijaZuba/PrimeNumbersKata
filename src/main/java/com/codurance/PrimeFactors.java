@@ -27,16 +27,22 @@ public class PrimeFactors {
 
     private static int identifyFactors(int result) {
         for (int i = primeNumbers.size() - 1; i > 0; i--) {
-            result = identifyPrimeFactor(result, primeNumbers.get(i));
+            result = divideResultByPrimeFactor(result, i);
         }
         return result;
     }
 
-    private static int identifyPrimeFactor(int result, int prime) {
+    private static int divideResultByPrimeFactor(int result, int i) {
+        int prime = primeNumbers.get(i);
         if(isDivisibleByPrime(result, prime)){
-            primeFactors.add(prime);
-            result = result / prime;
+            result = storePrimeAndDivide(result, prime);
         }
+        return result;
+    }
+
+    private static int storePrimeAndDivide(int result, int prime) {
+        primeFactors.add(prime);
+        result = result / prime;
         return result;
     }
 
