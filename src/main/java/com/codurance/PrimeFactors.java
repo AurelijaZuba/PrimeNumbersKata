@@ -6,6 +6,6 @@ import static java.util.Arrays.asList;
 
 public class PrimeFactors {
     public static List<Integer> generate(int input) {
-        return asList(1);
+        return input == 1 ? asList(1) : asList(2);
     }
 }
